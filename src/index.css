@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-decorative: "Cinzel Decorative", serif;
+
+  /* Premium Luxury Prestige Aurora Scale centered around #00F2FF */
+  --color-gold-50: #e0ffff;
+  --color-gold-100: #b3fdff;
+  --color-gold-200: #80fbff;
+  --color-gold-300: #4df9ff;
+  --color-gold-400: #1af7ff;
+  --color-gold-500: #00F2FF; /* Signature Luminous Cyber Cyan */
+  --color-gold-600: #00c2cc;
+  --color-gold-700: #009199;
+  --color-gold-800: #006166;
+  --color-gold-900: #003033;
+  --color-gold-950: #0a1929;
+}
+
+@layer base {
+  body {
+    background-color: #040a12; /* Deep space midnight blue-black */
+    color: #F3F4F6; /* Premium Oyster light grey */
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  /* Core Selection Styling matched to design theme */
+  ::selection {
+    background-color: #00F2FF;
+    color: #040a12;
+  }
+
+  /* Custom high-end scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #040a12;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #003033;
+    border-radius: 3px;
+    border: 1px solid #006166;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00F2FF;
+  }
+}
+
+/* Glassmorphism, luxury gradients & animation effects */
+.bg-glass {
+  background-color: rgba(4, 10, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.bg-glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 242, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.bg-glass-card-hover {
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.bg-glass-card-hover:hover {
+  border-color: rgba(0, 242, 255, 0.35);
+  background: rgba(0, 242, 255, 0.04);
+  box-shadow: 0 12px 36px -12px rgba(138, 43, 226, 0.35);
+  transform: translateY(-4px);
+}
+
+/* Aurora Borealis text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #00F2FF 40%, #00C2CC 70%, #8A2BE2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury border highlight animation */
+.royal-border-bottom {
+  position: relative;
+}
+.royal-border-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00F2FF, #8A2BE2, transparent);
+}
+
+/* Gilded frame effect using Aurora glow paths */
+.gilded-frame {
+  position: relative;
+  border: 1px solid rgba(0, 242, 255, 0.2);
+  padding: 8px;
+}
+.gilded-frame::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px solid rgba(138, 43, 226, 0.15);
+  pointer-events: none;
+}
+
+/* Fine-mesh linen overlay with faint polar dust particles */
+.linen-overlay {
+  position: relative;
+}
+.linen-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(0, 242, 255, 0.2) 1px, transparent 0), radial-gradient(rgba(138, 43, 226, 0.2) 1px, transparent 0);
+  background-size: 8px 8px;
+  background-position: 0 0, 4px 4px;
+}

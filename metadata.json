@@ -1,0 +1,6 @@
+{
+  "name": "Royal Spice",
+  "description": "Stunning, premium luxury modern restaurant website with a dark fine-dining theme, gold elements, and smooth interactions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
